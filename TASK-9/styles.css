@@ -1,0 +1,32 @@
+body {
+   background: url(images/1.jpg);
+   background-size: cover;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    color: white;
+    background:linear-gradient(rgb(10, 163, 190),rgb(22, 3, 105));
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px 5px rgba(255, 255, 255, 0.678);
+}
+h1 {
+    text-align: center;
+}
+#saveNoteBtn{
+    background-color: rgb(10, 163, 190);
+    transition: 0.3s;
+    box-shadow: none;
+    color: white;
+}
+#saveNoteBtn:hover{
+    transform: scale(1.05);
+}
+.edit{
+    background-color: rgb(10, 163, 190);
+    color: white;
+}
+.edit:hover{
+    color: white;
+}
