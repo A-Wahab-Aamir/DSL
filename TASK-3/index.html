@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Changer</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+    <div id="Main">
+        
+    <div id="mainWrapper">
+
+
+        <span class="tag">PROJECT #3</span>
+        <h1 class="Headings"><span>THEME</span> <span>CHANGER</span></h1>
+        
+
+
+
+        <div id="forThemeChanger">
+            <span class="savedOrunsaved">
+            <span class="savedOrunsavedTextContent">Unsaved</span>
+
+            <span class="forSavedIcon"><i class="ri-close-circle-line"></i></span>
+        </span>
+
+            <label id="picker" for="colorPicker"> <span>Pick Theme <i class="ri-brush-2-fill"></i></span>
+                <input type="color" value="#ffffff" id="colorPicker" onchange="forThemeChanger(this.value)">
+            </label>
+        </div>
+        
+
+
+
+        <div id="forChangingBackground">
+            <div id="nameOfColorInHexadecimal">#ffffff</div>
+        </div> 
+
+
+
+        <div id="forButtons">
+            <button><span>Save Theme <i class="ri-camera-lens-fill"></i></span></button>
+            <button><span>Clear Save <i class="ri-delete-bin-5-line"></i></span></button>
+        </div>
+
+
+    </div>
+ </div>
+
+<script src="script.js"></script>
+</body>
+</html>
