@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Calculator </title>
+    <meta charset = "utf-8" >
+    <script src = "calculator.js"> 
+    </script>
+    <link rel = "stylesheet" href = "calculator.css">
+  </head>
+  
+  <body id = "body">
+    <hgroup>
+      <h1> A simple Calculator </h1>
+      <h2> I can do basic math. Try me out! :) </h2>
+    </hgroup>
+    
+    <form>
+      <input type = "text" id= "firstNumber" value = "" placeholder = "First Number" />
+      
+      <select id = "operator" >
+	<option value = "+" > + </option>
+	<option value = "-" > - </option>
+	<option value = "*" > * </option>
+	<option value = "/" > / </option>
+      </select>
+      <input type = "text" id = "secondNumber" value = "" placeholder = "Second Number" />
+      <input type = "button" id = "ans" value = "ANS" onclick = "calculate();" />
+      <span id = "result"></span>
+    </form>
+    
+    
+  </body>
+  
+</html>
+    
+    

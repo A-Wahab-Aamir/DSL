@@ -1,0 +1,13 @@
+#body {
+ 	background-image: url(bg_page.png); 
+	background-color: #FDF8AB;
+	padding: 0;
+	margin: 0 auto;
+	background-position: center top;
+	width: 760px;
+	background-repeat: repeat-y;
+}
+	 
+h1 {
+  color: red;
+}
