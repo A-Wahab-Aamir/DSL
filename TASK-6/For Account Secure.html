@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Login</title>
+    <link rel="stylesheet" href="For Account Secure.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+
+</head>
+<body>
+    <img class="backgroundImage" src="BackImage.jpg" alt="Forest Image">
+
+    <main>
+        <h1>Login <i class="ri-login-circle-line"></i></h1>
+        <form id="Login-Form">
+
+                <div class="InputWrapper">
+                    <input id="userName" type="text" placeholder="User Name" required autocomplete="off">
+                </div>
+
+                <!-- error Msg -->
+                <span class="errorMsgForUserName Forerror IFError"></span>
+                <!-- error Msg -->
+                
+
+                <div class="InputWrapper">
+                    <input id="password" type="password" placeholder="Password" required autocomplete="off">
+
+                    <span class="passwordUnlocker" onclick="PasswordUnlockORLocked()">
+                        <i class="ri-lock-password-fill"></i>
+                        <!-- <i class=" passwordUnlocker"></i> -->
+                    </span>
+                </div>
+
+
+                <!-- error Msg -->
+                <span class="errorMsgForPassword Forerror IFError"></span>
+                <!-- error Msg -->
+                
+            
+            <button class="forLogin">Login <i class="ri-send-plane-fill"></i></button>
+
+            <div class="BottomPart">
+                <a href="">Term</a>
+            |
+                <a href="">Policy</a>
+            </div>
+        </form>
+    </main>
+
+    <script src="For Account Secure.js"></script>
+    
+</body>
+</html>

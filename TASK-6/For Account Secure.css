@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.backgroundImage{
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+
+::selection{
+    display: none;
+    text-shadow: none;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5rem 1.2rem;
+    width: 23rem;
+    background-color: rgba(255, 255, 255, 0.068);
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.192);
+    border-radius: 19px;
+
+}
+main>h1{
+    color: white;
+    font-size: 2.8rem;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.384);
+    margin-bottom: 35px;
+}
+#Login-Form>.InputWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 21rem;
+}
+#Login-Form>.InputWrapper>input{
+    width: 21rem;
+    padding: 10px 48px 10px 15px;
+    border: none;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.781);
+    border-radius: 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.322);
+    background-color: transparent;
+    font-size: 15px;
+    margin-bottom: 15px;
+    opacity: .9;
+}
+#Login-Form>.InputWrapper>input::selection{
+    background-color: rgba(88, 87, 87, 0.219);
+}
+#Login-Form>.InputWrapper>input:focus{
+    border: none;
+    outline: none;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.562);
+}
+.passwordUnlocker{
+    position: absolute;
+    top: 34%;
+    right: 8px;
+    transform: translate(-50% , -50%);
+    font-size: 19px;
+    opacity: .8;
+    cursor: pointer;
+}
+.Forerror{
+    position: relative;
+    bottom: 13px;
+    left: 4px;
+    font-size: 11px;
+    font-weight: 400;
+    cursor: default;
+}
+
+.IFError{
+    color: rgba(255, 2, 2, 0.808);
+}
+
+#Login-Form>.forLogin{
+    width: 100%;
+    padding: 13px 0;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.377);
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.699);
+}
+#Login-Form>.forLogin:hover{
+    background-color: rgba(255, 255, 255, 0.808);
+}
+
+
+#Login-Form>.InputWrapper>input::placeholder{
+    color: rgba(3, 3, 3, 0.589);
+    font-size: 14px;
+}
+
+.BottomPart>a,.BottomPart{
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    cursor: default;
+}
+.BottomPart>a:hover{
+    text-decoration: none;
+    cursor: pointer;   
+}
