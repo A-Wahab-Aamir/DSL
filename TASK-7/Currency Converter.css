@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(171, 37, 233);
+
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 14px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(252, 251, 251, 0.1);
+    color: white;
+    width: 27rem;
+  }
+
+  .container>h2{
+    font-size: 2.3rem;
+  }
+
+  .input-group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
+.input-wrapper{
+    width: 100%;
+}
+
+  select{
+    background-color: rgb(171, 37, 233);
+    color: white;
+  }
+
+  select, input {
+    width: 100%;
+    margin-top: 10px;
+    padding: 13px 8px;
+    font-size: 16px;
+    border: none;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: white;
+  }
+
+  input{
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    margin-bottom: 12px;
+  }
+
+  input:focus{
+    outline: none;
+  }
+
+  button{
+    padding: 14px;
+    margin-top: 10px;
+    border: none;
+
+  }
+
+
+  .input-wrapper>select{
+    padding: 11px 10px;
+    width: 11rem;
+    border-radius: 4px;
+}
+  .ForButtons{
+    display: flex;
+    justify-content: space-between;
+  }
+  button {
+    cursor: pointer;
+    border: 1.6px solid rgb(186, 88, 231);
+    color: white;
+    width: 48%;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    border-radius: 15px;
+  }
+
+  button:hover , #clear:hover {
+    background-color: rgb(186, 88, 231);
+  }
+
+  #result {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 16px;
+    width: 90%;
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+}
+
+
