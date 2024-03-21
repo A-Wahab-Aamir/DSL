@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --background:white;
+    --afterChangedColor: black;
+    --color: blueviolet;
+    --fontWeight:400;
+    --inputText: black;
+}
+:root.darkMode{
+    --background: rgb(19, 19, 19);
+    --afterChangedColor: white;
+    --fontWeight:200;
+    --inputText: white;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.transparentDiv{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.247);
+    backdrop-filter: blur(4px);
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all .4s;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.transparentDivEnable{
+    opacity: 1;
+    transition: all .4s;
+    visibility: visible;
+}
+
+.forVotting{
+    padding: .6rem 0;
+    width: 26rem;
+    background-color: rgba(137, 43, 226, 0.87);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    transform: translateY(30rem);
+    opacity: 0;
+    transition: all .4s;
+
+}
+
+.forVottingEnable{
+    transition: all .4s;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.forVottingEnable::before{
+    z-index: 7;
+    content: "";
+    position: absolute;
+    height: 12rem;
+    width: 60rem;
+    background-color: #fdfdfd8f;
+    animation: rotate 1s infinite;
+}
+
+@keyframes rotate {
+
+    100%{
+        rotate: 360deg;
+    }
+    
+}
+
+
+#VottingSection{
+    height: 100%;
+    width: 25rem;
+    background-color: var(--background);
+    padding: 2rem 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.342);
+    border-radius: 30px;
+    position: relative;
+    z-index: 8;
+    overflow: hidden;
+}
+
+.close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: blueviolet;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    border-bottom-left-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.close>i{
+    transition: all .5s;
+}
+
+.close>i:hover{
+    rotate: 90deg;
+}
+
+#VottingSection>h2{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-left: 20px;
+    margin-bottom: 40px;
+}
+
+
+
+
+#formForVotting>input.forFirstName,
+#formForVotting>input.forAge,
+#formForVotting>input.forEmailAddress{
+    margin-bottom: 14px;
+}
+#formForVotting>input.forPassword{
+    margin-bottom: 30px;
+}
+
+#formForVotting>input{
+    width: 100%;
+    font-weight: 300;
+    height: 37px;
+    border: none;
+    border-bottom: 2px solid var(--color);
+    color: var(--inputText);
+    font-size: 14px;
+    background-color: transparent;
+}
+
+#formForVotting>input:valid{
+    outline: none;
+}
+#formForVotting>input:focus{
+    border-bottom: 2px solid rgba(137, 43, 226, 0.377);
+    outline: none;
+}
+
+
+#formForVotting>button{
+    width: 100%;
+    height: 42px;
+    background-color: var(--color);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+.errorMsgForFname,.errorMsgForAge,.errorMsgForEmailAddress{
+    color: var(--inputText);
+    opacity: .5;
+    font-size: .7rem;
+    position: relative;
+    bottom: 10px;
+}
+.errorMsgForPassword{
+    color: var(--inputText);
+    opacity: .5;
+    font-size: .7rem;
+    position: relative;
+    bottom: 21px;
+}
+
+
+
+
+
+nav{
+    height: 12vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 14px 30px 0 30px;
+    background-color: var(--background);
+
+}
+
+nav>span , #VottingSection>h2>span{
+    position: relative;
+    color: var(--color);
+    font-weight: 700;
+    scale: .8;
+}
+nav>span>span , #VottingSection>h2>span>span{
+    color: white;
+}
+nav>span::before , #VottingSection>h2>span::before{
+    content: "";
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    top: -5.4px;
+    left: -15px;
+    z-index: -1;
+    background-color: var(--color);
+    border-radius: 30px;
+}
+
+
+.themeChanger{
+    width: 30px;
+    font-size: 23px;
+    padding: 10px 0;
+    position: relative;
+    margin-right: 20px;
+    cursor: pointer;
+    /* background-color: aqua; */
+}
+
+.themeChanger>#lightMode{
+    top: -3px;
+    left: 11%;
+    font-weight: 500;
+    position: absolute;
+    color: var(--color);
+    rotate: 30deg;
+    transition: all .4s;
+    opacity: 1;
+}
+
+.themeChanger>#lightMode:hover{
+    rotate:-30deg;
+}                                                             
+
+.lightModeIconRemoved{
+    scale:0;
+    transform: rotate(-60deg); 
+    transition: all .4s;
+    opacity: 0;
+}
+
+
+.themeChanger>#darkMode{
+    position: absolute;
+    left: 4px;
+    top: -2px;
+    scale: 0;
+    transform: rotate(160deg) ;
+    color: white;
+    transition: all .4s;
+    font-weight: 100;
+    opacity: 0;
+}
+.themeChanger>#darkMode:hover{
+    rotate: 10deg;
+}
+.themeChanger>#darkMode.darkModeIconAdded{
+    scale:1;
+    transform: rotate(-10deg);
+    transition: all .4s;
+    opacity: 1;
+}
+
+
+
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 88vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--background);
+}
+
+#leftDiv{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    padding: 0 35px;
+}
+
+.projectName{
+    background-color: var(--color);
+    width: 7rem;
+    padding: 5px 0;
+    text-align: center;
+    border-radius: 20px;
+    color: white;
+    margin-bottom: 10px;
+}
+#leftDiv>h1{
+    font-size: 3.1rem;
+    line-height: 64px;
+    font-weight: 700;
+    color: var(--afterChangedColor);
+}
+#leftDiv>h1>span{
+    color: var(--color);
+    font-style: italic;
+}
+
+#leftDiv>h4{
+    font-weight: var(--fontWeight);
+    font-size: 15px;
+    margin-top: 11px;
+    padding: 0 10px 0 0;
+    color: var(--afterChangedColor);
+}
+
+.forOpenVotingSystem{
+    width: 14rem;
+    padding: 12px 0;
+    margin-top: 20px;
+    background-color: var(--color);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.418);
+    font-size: .9rem;
+}
+.forOpenVotingSystem:hover{
+    background-color: rgb(162, 85, 233);
+    cursor: pointer;
+}
+
+.voteIcon{
+    font-size: 1rem;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+
+
+#rightDiv{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#rightDiv>img{
+    height: 35rem;
+    margin: 0 2rem 30px 0 ;
+}
+

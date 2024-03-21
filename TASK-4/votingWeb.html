@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting web</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <link rel="stylesheet" href="votingWeb.css">
+
+</head>
+<body>
+    <div class="transparentDiv">
+
+        <div class="forVotting">
+            
+            <div id="VottingSection">
+                <div class="close" onclick="votingSystemDisabled()">
+                    <i class="ri-close-line"></i>
+                </div>
+
+
+                <h2><span><span>Vo</span>tinger <i class="ri-verified-badge-line"></i></span></h2>
+    
+                <form id="formForVotting">
+
+                <input type="text" class="forFirstName" placeholder="Full Name" autocomplete="off" required>
+                <span class="errorMsgForFname"></span>
+    
+                <input type="text" class="forAge"  placeholder="Enter Your Age" autocomplete="off" required>
+                <span class="errorMsgForAge"></span>
+
+                <input type="text" class="forEmailAddress"  placeholder="Email Address" autocomplete="off" required>
+                <span class="errorMsgForEmailAddress"></span>
+
+                <input type="text" class="forPassword" placeholder="Password" autocomplete="off" required>
+                <span class="errorMsgForPassword"></span>
+
+                <button>Vote Now <i class="ri-send-plane-line"></i></button>
+            </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <nav>
+        
+        <span><span>Vo</span>tinger <i class="ri-verified-badge-line"></i></span>
+
+    
+        <div class="themeChanger">
+            <span  id="lightMode" onclick="forSettingTheme(this.id)">
+                <i class="ri-sun-fill"></i >
+            </span>
+            
+            <span id="darkMode" onclick="forSettingTheme(this.id)">
+                <i class="ri-moon-clear-fill"></i>
+            </span>
+        </div>
+
+    </nav>
+
+    <main>
+        <div id="leftDiv">
+
+            <span class="projectName">Project #4</span>
+            <h1>Online <span>Voting</span> Web<br>Feel <span>Free <i class="ri-send-plane-line"></i></span> To Vote</h1>
+
+            <h4>Your active participation in our online voting platform is deeply valued and appreciated. By casting your vote, you're not just exercising your right, but also contributing to the collective voice of our community. Every vote matters, and your decision plays a crucial role in shaping our shared future. Thank you for taking the time to engage with us and make your voice heard.</h4>
+
+            <button class="forOpenVotingSystem" onclick="votingSystemEnabled()">Vote Now <i class="ri-archive-stack-line voteIcon"></i></button>
+        </div>
+        <div id="rightDiv">
+            <img src="presidential-election-speech.webp" alt="presidential-election-speech">
+        </div>
+    </main>
+
+    <script src="votingWeb.js"></script>
+</body>
+</html>
